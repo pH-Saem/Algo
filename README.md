@@ -124,6 +124,7 @@
 | 문제번호 | 링크 |
 | ----- | ----- |
 |1011. Fly me to the Alpha Centauri|[링크](./%EB%B0%B1%EC%A4%80/Gold/1011.%E2%80%85Fly%E2%80%85me%E2%80%85to%E2%80%85the%E2%80%85Alpha%E2%80%85Centauri/Fly%E2%80%85me%E2%80%85to%E2%80%85the%E2%80%85Alpha%E2%80%85Centauri.cc)|
+|1062. 가르침|[링크](./%EB%B0%B1%EC%A4%80/Gold/1062.%E2%80%85%EA%B0%80%EB%A5%B4%EC%B9%A8/%EA%B0%80%EB%A5%B4%EC%B9%A8.java)|
 |10993. 별 찍기 － 18|[링크](./%EB%B0%B1%EC%A4%80/Gold/10993.%E2%80%85%EB%B3%84%E2%80%85%EC%B0%8D%EA%B8%B0%E2%80%85%EF%BC%8D%E2%80%8518/%EB%B3%84%E2%80%85%EC%B0%8D%EA%B8%B0%E2%80%85%EF%BC%8D%E2%80%8518.java)|
 |1103. 게임|[링크](./%EB%B0%B1%EC%A4%80/Gold/1103.%E2%80%85%EA%B2%8C%EC%9E%84/%EA%B2%8C%EC%9E%84.cc)|
 |11657. 타임머신|[링크](./%EB%B0%B1%EC%A4%80/Gold/11657.%E2%80%85%ED%83%80%EC%9E%84%EB%A8%B8%EC%8B%A0/README.md)|
