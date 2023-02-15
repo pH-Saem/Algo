@@ -11,8 +11,6 @@ public class Main {
 
 	static int deltas[][] = {{}, {-1, 0}, {-1, -1}, {0, -1}, {1, -1}, {1, 0}, {1, 1}, {0, 1}, {-1, 1}};
 	static int max;
-	// space : 현재 공간의 물고기 정보를 저장할 배열
-	// fishes : 물고기 이동할 때 사용할 1번부터 차례대로 저장된 배열
 	
 	// 물고기 정보 저장할 Fish 클래스.
 	static class Fish{
@@ -32,8 +30,10 @@ public class Main {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		// 1. 입력
 		Fish fish, shark = new Fish();
+		// shark : 상어의 경우 num을 지금까지 먹은 물고기 번호 합으로 이용
+		// space : 현재 공간의 물고기 정보를 저장할 배열
+		// fishes : 물고기 이동할 때 사용할 1번부터 차례대로 저장된 배열
 		Fish space[][] = new Fish[4][4], fishes[] = new Fish[17];
 		for(int r = 0; r < 4; r++) {
 			st = new StringTokenizer(br.readLine());
@@ -48,29 +48,14 @@ public class Main {
 			}
 		}
 		
+		// 상어 배치
 		eatFish(space, fishes, space[0][0], shark);
-		
-//		이동 테스트
-//		moveFishes(space, fishes, shark);
-//		printSpace(space);
 		
 		circleOfLife(space, fishes, shark);
 		
 		System.out.println(max);
 	}
 	
-	// 공간 정보 출력
-	public static void printSpace(Fish[][] space) {
-		for(int r = 0; r < 4; r++) {
-			for(int c = 0; c < 4; c++) {
-				if(space[r][c] != null)
-					System.out.print(space[r][c].num + " ");
-				else
-					System.out.print("  ");
-			}
-			System.out.println();
-		}
-	}
 	
 	// 물고기 이동 + 물고기 냠얌
 	public static void circleOfLife(Fish[][] space, Fish[] fishes, Fish shark) {
@@ -90,7 +75,7 @@ public class Main {
 			newFishes = new Fish[17];
 			newShark = new Fish(shark);
 			
-			copySpaceAndFishes(space, newSpace, newFishes);		// 정보 복사
+			copySpaceAndFishes(fishes, newSpace, newFishes);		// 정보 복사
 			eatFish(newSpace, newFishes, poorFish, newShark);	// 물고기 먹기
 			
 			circleOfLife(newSpace, newFishes, newShark);		// 다음 사이클
@@ -98,16 +83,13 @@ public class Main {
 	}
 	
 	// space와 fishes 복사하는 메서드
-	public static void copySpaceAndFishes(Fish[][] oldSpace, Fish[][] newSpace, Fish[] newFishes) {
-		Fish fish;
-		for(int r = 0; r < 4; r++) {
-			for(int c = 0; c < 4; c++) {
-				if(oldSpace[r][c] != null) {
-					fish = new Fish(oldSpace[r][c]);
-					newSpace[r][c] = fish;
-					newFishes[fish.num] = fish; 
-				}
-			}
+	public static void copySpaceAndFishes(Fish[] oldFishes, Fish[][] newSpace, Fish[] newFishes) {
+		Fish newFish;
+		for(Fish oldFish : oldFishes) {
+            if(oldFish == null) continue;
+			newFish = new Fish(oldFish);
+			newFishes[oldFish.num] = newFish;
+			newSpace[oldFish.r][oldFish.c] = newFish;
 		}
 	}
 	
