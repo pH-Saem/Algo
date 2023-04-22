@@ -174,6 +174,7 @@
 | 문제번호 | 링크 |
 | ----- | ----- |
 |11266. 단절점|[링크](./%EB%B0%B1%EC%A4%80/Platinum/11266.%E2%80%85%EB%8B%A8%EC%A0%88%EC%A0%90/%EB%8B%A8%EC%A0%88%EC%A0%90.cc)|
+|23034. 조별과제 멈춰！|[링크](./%EB%B0%B1%EC%A4%80/Platinum/23034.%E2%80%85%EC%A1%B0%EB%B3%84%EA%B3%BC%EC%A0%9C%E2%80%85%EB%A9%88%EC%B6%B0%EF%BC%81/README.md)|
 |3955. 캔디 분배|[링크](./%EB%B0%B1%EC%A4%80/Platinum/3955.%E2%80%85%EC%BA%94%EB%94%94%E2%80%85%EB%B6%84%EB%B0%B0/README.md)|
 ### 🚀 Silver
 | 문제번호 | 링크 |
